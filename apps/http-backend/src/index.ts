@@ -2,7 +2,7 @@ import express from "express"
 import jwt from "jsonwebtoken"
 import { middleware } from "./middleware";
 import {JWT_SECRET} from "@repo/backend-common/configs"
-import {CreateUserSchema,SignInSchema,CreateRoomSchema} from "@repo/common/types"
+import {CreateUserSchema,SigninSchema,CreateRoomSchema} from "@repo/common/types"
 
 const app = express();
 app.use(express.json());
@@ -26,7 +26,7 @@ app.post("signin" ,(req,res)=>{
      userId
     },JWT_SECRET);
 
-    const data = SignInSchema.safeParse(req.body);
+    const data = SigninSchema.safeParse(req.body);
    if(!data.success){
      res.json({
         message:"Incorrect inputs"
