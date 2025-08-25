@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -b",
@@ -11,13 +10,15 @@
     "dev": "npm run build && npm run start"
   },
   "dependencies": {
+    "@repo/backend-common": "workspace:*",
+    "@repo/common": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@types/cors": "^2.8.19",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/ws": "^8.18.1",
+    "cors": "^2.8.5",
     "jsonwebtoken": "^9.0.2",
-    "ws": "^8.18.3",
-    "@repo/backend-common":"workspace:*",
-    "@repo/common":"workspace:*"
+    "ws": "^8.18.3"
   },
   "keywords": [],
   "author": "",

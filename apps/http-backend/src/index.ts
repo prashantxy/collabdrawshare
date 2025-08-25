@@ -3,9 +3,10 @@ import jwt from "jsonwebtoken"
 import { middleware } from "./middleware";
 import {JWT_SECRET} from "@repo/backend-common/configs"
 import {CreateUserSchema,SigninSchema,CreateRoomSchema} from "@repo/common/types"
-
+import cors from "cors"
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.post("/signup",(req,res)=>{
    const data = CreateUserSchema.safeParse(req.body);
