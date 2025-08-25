@@ -18,7 +18,13 @@ wss.on('connection',function connection(ws,request){
         ws.close();
         return;
     }
-    ws.on('message',function message(data){
-         ws.send("hello");
+    ws.on('message',async function message(data){
+        let parsedData;
+        if(typeof parsedData!== String()){
+            parsedData = JSON.parse(data.toString());
+        }
+        else{
+            parsedData = JSON.parse(data);
+        }
     });
 });
