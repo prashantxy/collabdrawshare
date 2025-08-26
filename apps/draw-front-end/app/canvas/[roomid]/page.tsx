@@ -1,14 +1,13 @@
 "use client"
 import { initDraw } from "@/draw";
-import { useRef ,useState,useEffect} from "react";
+import { useRef ,useEffect} from "react";
 
 export default function Home() {
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(()=>{
     if(canvasRef.current){
-     
-      initDraw()
+      initDraw(canvasRef.current);
     }
   },[canvasRef])
   return (
