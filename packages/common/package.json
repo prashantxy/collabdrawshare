@@ -1,12 +1,10 @@
 {
   "name": "@repo/common",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "index.js",
   "exports": {
     "./types": "./src/types.ts"
   },
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +14,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "zod": "^4.1.1"
+    "zod": "^3.24.1"
   }
 }
