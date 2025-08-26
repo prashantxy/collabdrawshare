@@ -1,7 +1,14 @@
 {
-    "extends": "../typescript-config/base.json",
-    "compilerOptions": {
+  "extends": "../typescript-config/base.json",
+  "compilerOptions": {
     "outDir": "dist",
-    "rootDir":"src"
-  }
+    "rootDir": "src",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ES2020",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
