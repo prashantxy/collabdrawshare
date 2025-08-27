@@ -161,6 +161,10 @@ importers:
         version: 8.18.1
 
   packages/backend-common:
+    dependencies:
+      '@types/node':
+        specifier: ^22.10.5
+        version: 22.15.3
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
@@ -169,8 +173,8 @@ importers:
   packages/common:
     dependencies:
       zod:
-        specifier: ^4.1.1
-        version: 4.1.1
+        specifier: ^3.24.1
+        version: 3.25.76
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
@@ -179,15 +183,15 @@ importers:
   packages/db:
     dependencies:
       '@prisma/client':
-        specifier: 6.2.1
-        version: 6.2.1(prisma@6.14.0(typescript@5.9.2))
-      prisma:
-        specifier: ^6.2.1
-        version: 6.14.0(typescript@5.9.2)
+        specifier: 6.14.0
+        version: 6.14.0(prisma@6.14.0(typescript@5.9.2))(typescript@5.9.2)
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
+      prisma:
+        specifier: 6.14.0
+        version: 6.14.0(typescript@5.9.2)
 
   packages/eslint-config:
     devDependencies:
@@ -546,13 +550,16 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@prisma/client@6.2.1':
-    resolution: {integrity: sha512-msKY2iRLISN8t5X0Tj7hU0UWet1u0KuxSPHWuf3IRkB4J95mCvGpyQBfQ6ufcmvKNOMQSq90O2iUmJEN2e5fiA==}
+  '@prisma/client@6.14.0':
+    resolution: {integrity: sha512-8E/Nk3eL5g7RQIg/LUj1ICyDmhD053STjxrPxUtCRybs2s/2sOEcx9NpITuAOPn07HEpWBfhAVe1T/HYWXUPOw==}
     engines: {node: '>=18.18'}
     peerDependencies:
       prisma: '*'
+      typescript: '>=5.1.0'
     peerDependenciesMeta:
       prisma:
+        optional: true
+      typescript:
         optional: true
 
   '@prisma/config@6.14.0':
@@ -2524,8 +2531,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@4.1.1:
-    resolution: {integrity: sha512-SgMZK/h8Tigt9nnKkfJMvB/mKjiJXaX26xegP4sa+0wHIFVFWVlsQGdhklDmuargBD3Hsi3rsQRIzwJIhTPJHA==}
+  zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
 snapshots:
 
@@ -2764,9 +2771,10 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@prisma/client@6.2.1(prisma@6.14.0(typescript@5.9.2))':
+  '@prisma/client@6.14.0(prisma@6.14.0(typescript@5.9.2))(typescript@5.9.2)':
     optionalDependencies:
       prisma: 6.14.0(typescript@5.9.2)
+      typescript: 5.9.2
 
   '@prisma/config@6.14.0':
     dependencies:
@@ -5046,4 +5054,4 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod@4.1.1: {}
+  zod@3.25.76: {}
