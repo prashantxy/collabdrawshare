@@ -3,11 +3,17 @@
 This Turborepo is maintained by the me.
 
 Tech-stack.
+
 Frontend:- Next.js,typescript and canva.
+
 Backend :- Express,Node.
+
 Database:- Postgres(hosted on neon db)
+
 ORM :- Prisma.
-Containerized: docker.hub
+
+Containerized: docker
+
 
 To run either clone it.
 Or use Docker.hub link.
